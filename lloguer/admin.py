@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Automobil
 
-# Register your models here.
+class AutomobilAdmin(admin.ModelAdmin):
+    list_display = ('matricula', 'marca', 'model')
+
+admin.site.register(Automobil, AutomobilAdmin)
